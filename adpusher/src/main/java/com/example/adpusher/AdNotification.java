@@ -2,6 +2,8 @@ package com.example.adpusher;
 
 import android.content.Context;
 import android.util.Log;
+
+import java.util.HashMap;
 import java.util.Map;
 
 public class AdNotification {
@@ -26,6 +28,10 @@ public class AdNotification {
     }
 
     static public void registerToken(String token) {
-        Log.d("AdNotification", token);
+        HashMap<String, String> data = new HashMap<>();
+        data.put("token", token);
+
+        TokenPoster tokenPoster = new TokenPoster(data);
+        tokenPoster.execute();
     }
 }
