@@ -1,0 +1,3 @@
+include ':adpusher'
+include ':app'
+rootProject.name = "TestPushApp"
