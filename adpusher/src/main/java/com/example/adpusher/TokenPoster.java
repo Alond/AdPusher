@@ -40,7 +40,7 @@ public class TokenPoster extends AsyncTask<Void, String, String> {
         byte[] result = null;
         String str = "";
         HttpClient client = new DefaultHttpClient();
-        HttpPost post = new HttpPost("http://push.pandatainment.ru/setToken");// in this case, params[0] is URL
+        HttpPost post = new HttpPost("https://push.pandatainment.ru/setToken");
         try {
             JSONObject jsonObject = new JSONObject(mData);
 
